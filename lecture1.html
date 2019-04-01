@@ -1,0 +1,13 @@
+L1: The principle
+1. the response /request in scrapy corresponding to these in HTTP protcol
+2. the process
+- spider get the url and handle it the request , then submit it to the engine
+- then request being put into scheduler, then some alogrithm sequence it, finally to the downloader
+- downloader sends the request to http server, the server the correspond with a response (contains html)
+- response then be passed to spider function ,encontianed to "item", to item pipelines, then finall exporter. (csv)
+
+
+3.the request object:
+Request(url[,callback,method="GET",headers,body,cookies,meta,encoding='utf-8',priority=0,dont_filter=False,errback ])
+//dont_filter,是否重复爬取之前的。
+
